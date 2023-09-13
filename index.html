@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Alunos</title>
+
+    <script src="./app.js"></script>
+</head>
+<body>
+    
+    <h1>Relatório de Alunos</h1>
+    
+    <button onclick="cadastrarAluno()">Cadastrar Aluno</button>
+    <button onclick="relatorioCrescenteNome()">Relatório Crescente por Nome</button>
+    <button onclick="relatorioDecrescenteRa()">Relatório Decrescente por RA</button>
+    <button onclick="relatorioAprovadosCrescenteNome()">Relatório de Aprovados</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>RA</th>
+                <th>Idade</th>
+                <th>Nota</th>
+                <th>Sexo</th>
+                <th>Média</th>
+                <th>Resultado</th>
+            </tr>
+        </thead>
+        <tbody id="output">
+        </tbody>
+    </table>
+
+</body>
+</html>
