@@ -9,9 +9,12 @@ Se preferir, poderá definir um limite máximo de alunos cadastrados
 ## Squad
 </summary>
 
-***Members:***      
-**Name: Leonardo Carvelho Naves** 
-**GitHub: https://github.com/Navesx0**                    
+***Members:***    
+**Name: Gabriela Ferreira** 
+
+**Name: Leonardo Carvalho Naves** 
+**GitHub: https://github.com/Navesx0**       
+             
 **Name: Pedro Henrique Mota**                 
 **GitHub: https://github.com/MotahPedro**   
 
