@@ -11,7 +11,8 @@
     <script src="./scripts.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -25,9 +26,12 @@
                     <select name="selecao" id="selecao" onchange="selecionarOpcao()">
                         <option value="escolha">Selecione uma opção</option>
                         <option value="cadastro">Cadastrar Alunos</option>
-                        <option value="nomeCrescente">Relatório de Alunos em ordem crescente por nome</option>
-                        <option value="raDecrescente">Relatório de Alunos em ordem decrescente por RA</option>
-                        <option value="aprovadosNomeCrescente">Relatório de Alunos aprovados em ordem crescente por nome</option>
+                        <option value="nomeCrescente" id="opcaoNomeCrescente">Relatório de Alunos em ordem crescente por
+                            nome</option>
+                        <option value="raDecrescente" id="raDecrescente">Relatório de Alunos em ordem decrescente por RA
+                        </option>
+                        <option value="aprovadosNomeCrescente" id="aprovadosNomeCrescente">Relatório de Alunos aprovados
+                            em ordem crescente por nome</option>
                     </select>
                     <div>
                         <button type="button" onClick="sair()">Sair</button>
@@ -61,12 +65,14 @@
                             <option value="Outro">Outro</option>
                         </select>
                     </div>
-                    <div class="form-control">
-                        <label for="resultado">Resultado</label>
-                        <select id="resultado">
-                            <option value="Aprovado">Aprovado</option>
-                            <option value="Reprovado">Reprovado</option>
-                        </select>
+
+                    <div>
+                        Resultado:
+                        <br>
+                        <input type="radio" id="aprovado" name="resultado" value="Aprovado" />
+                        <label for="aprovado">Aprovado</label><br>
+                        <input type="radio" id="reprovado" name="resultado" value="Reprovado" />
+                        <label for="reprovado">Reprovado</label>
                     </div>
                     <button type="submit">Enviar</button>
                 </form>
