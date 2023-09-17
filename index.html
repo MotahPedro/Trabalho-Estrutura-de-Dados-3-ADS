@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório Fatec</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./Cadastrador.js"></script>
+    <script src="./scripts.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section id="tela-principal">
+        <div class="container">
+            <div class="header">
+                <!-- -------------------------------------------- MENU DE SELEÇÃO -------------------------------------------- -->
+                <div id="menu-selecao">
+                    <h3>Formulário de Alunos</h3>
+                    <label for="selecao">Escolha uma opção</label>
+                    <select name="selecao" id="selecao" onchange="selecionarOpcao()">
+                        <option value="escolha">Selecione uma opção</option>
+                        <option value="cadastro">Cadastrar Alunos</option>
+                        <option value="nomeCrescente" id="opcaoNomeCrescente">Relatório de Alunos em ordem crescente por
+                            nome</option>
+                        <option value="raDecrescente" id="raDecrescente">Relatório de Alunos em ordem decrescente por RA
+                        </option>
+                        <option value="aprovadosNomeCrescente" id="aprovadosNomeCrescente">Relatório de Alunos aprovados
+                            em ordem crescente por nome</option>
+                    </select>
+                    <div>
+                        <button type="button" onClick="sair()">Sair</button>
+                    </div>
+                </div>
+                <!-- -------------------------------------------- FORMULARIO ALUNO -------------------------------------------- -->
+                <form id="alunoForm" onsubmit="cadastrarAluno(); return false;" style="display: none;">
+
+                    <h2>Cadastro de Alunos</h2>
+                    <div class="form-control">
+                        <label for="nome">Nome do Aluno</label>
+                        <input type="text" id="nome" placeholder="Nome do Aluno">
+                    </div>
+                    <div class="form-control">
+                        <label for="idade">Idade do Aluno</label>
+                        <input type="text" id="idade" placeholder="Digite a Idade do Aluno">
+                    </div>
+                    <div class="form-control">
+                        <label for="ra">RA do Aluno</label>
+                        <input type="string" id="ra" placeholder="Digite o RA do Aluno">
+                    </div>
+                    <div class="form-control">
+                        <label for="media">Média do Aluno</label>
+                        <input type="number" id="media" placeholder="Média do Aluno">
+                    </div>
+                    <div class="form-control">
+                        <label for="sexo">Sexo do Aluno</label>
+                        <select id="sexo">
+                            <option value="Feminino">Feminino</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        Resultado:
+                        <br>
+                        <input type="radio" id="aprovado" name="resultado" value="Aprovado" />
+                        <label for="aprovado">Aprovado</label><br>
+                        <input type="radio" id="reprovado" name="resultado" value="Reprovado" />
+                        <label for="reprovado">Reprovado</label>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+                <!-- -------------------------------------------- RELATÓRIOS -------------------------------------------- -->
+                <table id="relatorioTabela" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>RA</th>
+                            <th>Idade</th>
+                            <th>Sexo</th>
+                            <th>Média</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="output">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
